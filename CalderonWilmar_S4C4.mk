@@ -1,13 +1,13 @@
 #MakeFile
 
-resultados.pdf : resultados.tex
+resultados.pdf : resultados.tex plot1.pdf plot.pdf
 	pdflatex resultados.tex
 
-plotdatos.py : makedatos.py
+plot.pdf : makedatos.py
 	python makedatos.py > datos.dat
 	python plotdatos.py	
 
-plotdatos1.py : makedatos1.py
+plot1.pdf : makedatos1.py
 	python makedatos1.py > datos1.dat
 	python plotdatos1.py
 
